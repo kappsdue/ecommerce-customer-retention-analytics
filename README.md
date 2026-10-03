@@ -1,4 +1,4 @@
-# 🛍️ E-commerce Customer Retention & Cohort Analytics
+# E-commerce Customer Retention & Cohort Analytics
 
 ![Python](https://img.shields.io/badge/Python-Data%20Engineering-blue)
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811)
