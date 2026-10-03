@@ -20,20 +20,11 @@ customer_table = customer_table.merge(customer_revenue, on='customer_unique_id',
 customer_table['total_revenue'] = customer_table['total_revenue'].fillna(0)
 customer_table = add_customer_segments(customer_table)
 
-#print(customer_table.head())
-#print(customer_month_table.head())
+run_all_val_checks(customer_table,customer_month_table)
 
-#run_all_val_checks(customer_table,customer_month_table)
-
-#print(customer_table.info())
-#print(customer_month_table.info())
-
-#create_database_if_not_exists()
-#create_table_if_not_exist()
-#load_data(customer_table,'customers',
-#['customer_unique_id','total_orders','first_purchase_date', 'repeat_customer', 'cohort_month','total_revenue',
-#           'value_segment','retention_segment','customer_segment'])
-#load_data(customer_month_table,'customer_month',['customer_unique_id','order_month','orders_that_month'])
-
-print(customer_table['customer_segment'].value_counts()
-      )
+create_database_if_not_exists()
+create_table_if_not_exist()
+load_data(customer_table,'customers',
+['customer_unique_id','total_orders','first_purchase_date', 'repeat_customer', 'cohort_month','total_revenue',
+           'value_segment','retention_segment','customer_segment'])
+load_data(customer_month_table,'customer_month',['customer_unique_id','order_month','orders_that_month'])
